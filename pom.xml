@@ -257,7 +257,6 @@
 						<phase>post-integration-test</phase>
 						<goals>
 							<goal>stop</goal>
-							<goal>remove</goal>
 						</goals>
 					</execution>
 					<execution>
@@ -265,6 +264,7 @@
 						<phase>deploy</phase>
 						<goals>
 							<goal>push</goal>
+							<goal>remove</goal>
 						</goals>
 					</execution>
 				</executions>
