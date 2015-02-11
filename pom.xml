@@ -15,7 +15,7 @@
 
 	<groupId>de.alexkrieg</groupId>
 	<artifactId>simple-webservice</artifactId>
-	<version>${main.version}-${build.number}-${build.counter}</version>
+	<version>${main.version}-${build.number}</version>
 	<packaging>war</packaging>
 	<name>Hello World JAX-WS Web service</name>
 	<description>Hello World JAX-WS Web service</description>
@@ -46,7 +46,7 @@
 		<image.registryHost></image.registryHost>
 		<image.namespace>alitari/</image.namespace>
 		<image.repository>simple-webservice</image.repository>
-		<image.version>3.0</image.version>
+		<image.version>${project.version}</image.version>
 
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -86,7 +86,7 @@
 		<repository>
 			<id>deployment</id>
 			<name>Internal Releases</name>
-			<url>http://192.168.0.24:8081/content/repositories/snapshots</url>
+			<url>http://192.168.0.24:8081/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>deployment</id>
@@ -179,6 +179,16 @@
 				<version>${version.war.plugin}</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<manifest>
+						<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+					</manifest>
+					<archive>
+						<manifestEntries>
+							<Specification-Title>${project.name}</Specification-Title>
+							<Specification-Version>${project.version}</Specification-Version>
+							<Implementation-Version>${git.commit}</Implementation-Version>
+						</manifestEntries>
+					</archive>
 				</configuration>
 			</plugin>
 			<!-- WildFly plugin to deploy war -->
