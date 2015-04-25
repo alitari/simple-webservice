@@ -26,7 +26,14 @@ All you need to build this project is Java 7.0 (Java SDK 1.7) or better, Maven 3
 The application this project produces is designed to be run on JBoss WildFly.
 
 
-
+Maven properties 
+---------------
+ 
+build.number=${BUILD_NUMBER}
+git.commit=${GIT_COMMIT}
+docker.removeAll=true
+docker.username=<your registry username e.g. username of dockerhub>
+docker.password=<your registry password>
 
 Access the application 
 ---------------------
