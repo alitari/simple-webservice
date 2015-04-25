@@ -29,11 +29,11 @@ The application this project produces is designed to be run on JBoss WildFly.
 Maven properties 
 ---------------
  
-build.number  
-git.commit 
-docker.removeAll = true
-docker.username = your registry username e.g. username of dockerhub
-docker.password = your registry password
+build.number , 
+git.commit , 
+docker.removeAll = true ,
+docker.username your registry username e.g. username of dockerhub ,
+docker.password  your registry password ,
 
 Access the application 
 ---------------------
