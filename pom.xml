@@ -38,7 +38,7 @@
 
 		<!-- docker -->
 		<!-- <dockerHost>192.168.0.24</dockerHost> -->
-		<dockerPort>2375</dockerPort>
+		<!-- <dockerPort>2375</dockerPort> -->
 		<wsport>8888</wsport>
 
 		<imageFrom>jboss/wildfly:latest</imageFrom>
