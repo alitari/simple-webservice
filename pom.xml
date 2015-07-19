@@ -39,6 +39,8 @@
 		<!-- docker -->
 		<!-- <dockerHost>192.168.0.24</dockerHost> -->
 		<!-- <dockerPort>2375</dockerPort> -->
+		<!-- <certPath></certPath> -->
+		
 		<wsport>8888</wsport>
 
 		<imageFrom>jboss/wildfly:latest</imageFrom>
@@ -215,6 +217,7 @@
 					<logDate>default</logDate>
 					<autoPull>true</autoPull>
 					<dockerHost>http://${dockerHost}:${dockerPort}</dockerHost>
+					<certPath>${certPath}</certPath>
 					<images>
 						<!-- Docker Image to use -->
 						<image>
